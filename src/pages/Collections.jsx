@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { assetPath } from "../assetPath";
 import { toSlug } from "../catalog";
 import { collections } from "../data";
 import { ServiceStrip } from "../components/Layout";
@@ -27,7 +28,7 @@ export function Collections() {
 
       <section className="collections-feature" aria-labelledby="featured-collection-title">
         <div className="collections-feature__image">
-          <img src="/assets/houmaah-timeless-essentials-banner.png" alt="Houmaah Timeless Essentials collection editorial" />
+          <img src={assetPath("assets/houmaah-timeless-essentials-banner.png")} alt="Houmaah Timeless Essentials collection editorial" />
         </div>
         <div className="collections-feature__copy">
           <p className="eyebrow">Featured collection</p>

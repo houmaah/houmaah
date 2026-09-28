@@ -1,3 +1,5 @@
+import { assetPath } from "./assetPath";
+
 export const routes = [
   { label: "New In", to: "/new-in" },
   { label: "Shop", to: "/shop" },
@@ -160,7 +162,7 @@ export const collections = [
     title: "New Season",
     text: "The newest silhouettes and color stories in the Houmaah world.",
     count: "24 pieces",
-    image: "/assets/houmaah-hero-banner.png",
+    image: assetPath("assets/houmaah-hero-banner.png"),
     alt: "Houmaah new season tailored campaign",
     season: true,
   },

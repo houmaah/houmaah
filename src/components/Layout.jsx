@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
+import { assetPath } from "../assetPath";
 import { routes, services } from "../data";
 import { formatPrice } from "./cartUtils";
 import { ArrowIcon, BagIcon, HeartIcon, SearchIcon, ServiceIcon } from "./Icons";
@@ -72,7 +73,7 @@ export function Layout({ children }) {
           </button>
 
           <Link className="logo" to="/" aria-label="Houmaah home">
-            <img src="/assets/houmaah-logo-black.png" alt="Houmaah" />
+            <img src={assetPath("assets/houmaah-logo-black.png")} alt="Houmaah" />
           </Link>
 
           <nav className="desktop-nav" aria-label="Main navigation">

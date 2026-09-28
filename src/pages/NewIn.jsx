@@ -1,4 +1,5 @@
 import { Link, useSearchParams } from "react-router";
+import { assetPath } from "../assetPath";
 import { SHOP_CATEGORIES, SORT_OPTIONS, buildCatalogSearch, sortProducts, toSlug } from "../catalog";
 import { products } from "../data";
 import { ProductCard } from "../components/ProductCard";
@@ -57,7 +58,7 @@ export function NewIn() {
       </section>
 
       <section className="new-in-editorial" aria-labelledby="new-in-editorial-title">
-        <img src="/assets/houmaah-timeless-essentials-banner.png" alt="Houmaah Timeless Essentials editorial banner" />
+        <img src={assetPath("assets/houmaah-timeless-essentials-banner.png")} alt="Houmaah Timeless Essentials editorial banner" />
         <div>
           <p className="eyebrow">The new mood</p>
           <h2 id="new-in-editorial-title">Timeless Essentials</h2>

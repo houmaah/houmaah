@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { assetPath } from "../assetPath";
 import { ServiceStrip } from "../components/Layout";
 
 export function Lookbook() {
@@ -12,7 +13,7 @@ export function Lookbook() {
 
       <section className="lookbook-feature" aria-labelledby="lookbook-feature-title">
         <div className="lookbook-feature__media">
-          <img src="/assets/houmaah-hero-banner.png" alt="Houmaah lookbook models styled in soft tailored pastel suits" />
+          <img src={assetPath("assets/houmaah-hero-banner.png")} alt="Houmaah lookbook models styled in soft tailored pastel suits" />
         </div>
         <div className="lookbook-feature__copy">
           <p className="eyebrow">Current mood</p>
@@ -38,7 +39,7 @@ export function Lookbook() {
           {[
             ["Evening Ease", "Soft occasion pieces that carry presence through proportion, fabric, and restraint.", "https://images.pexels.com/photos/19401640/pexels-photo-19401640/free-photo-of-studio-shot-of-model-in-beige-dress.jpeg?auto=compress&cs=tinysrgb&w=900", "Neutral occasionwear lookbook styling in a beige studio setting"],
             ["Daily Poise", "Refined everyday dressing with room to move, layer, and repeat.", "https://images.pexels.com/photos/28895909/pexels-photo-28895909/free-photo-of-elegant-woman-in-beige-dress-outdoors.jpeg?auto=compress&cs=tinysrgb&w=900", "Warm everyday Houmaah styling in a neutral outdoor setting"],
-            ["Print and Light", "Feminine color and delicate pattern, balanced by clean lines and warm texture.", "/assets/houmaah-timeless-essentials-banner.png", "Timeless Essentials lookbook portrait with warm neutral styling"],
+            ["Print and Light", "Feminine color and delicate pattern, balanced by clean lines and warm texture.", assetPath("assets/houmaah-timeless-essentials-banner.png"), "Timeless Essentials lookbook portrait with warm neutral styling"],
           ].map(([title, text, image, alt], index) => (
             <article className="lookbook-chapter" key={title}>
               <img src={image} alt={alt} />

@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { assetPath } from "../assetPath";
 import { toSlug } from "../catalog";
 import { collections, products } from "../data";
 import { Newsletter, ServiceStrip } from "../components/Layout";
@@ -14,7 +15,7 @@ export function Home() {
   return (
     <main>
       <section className="hero" aria-labelledby="hero-title">
-        <img className="hero__image" src="/assets/houmaah-hero-banner.png" alt="Houmaah campaign with three women styled in soft tailored pastel suits" />
+        <img className="hero__image" src={assetPath("assets/houmaah-hero-banner.png")} alt="Houmaah campaign with three women styled in soft tailored pastel suits" />
         <div className="hero__content">
           <p className="eyebrow">Houmaah</p>
           <h1 id="hero-title">
@@ -82,7 +83,7 @@ export function Home() {
       </section>
 
       <section className="campaign" aria-labelledby="campaign-title">
-        <img className="campaign__image" src="/assets/houmaah-timeless-essentials-banner.png" alt="Houmaah Timeless Essentials model seated in a floral outfit with warm neutral styling" />
+        <img className="campaign__image" src={assetPath("assets/houmaah-timeless-essentials-banner.png")} alt="Houmaah Timeless Essentials model seated in a floral outfit with warm neutral styling" />
         <div>
           <p className="eyebrow">New arrivals</p>
           <h2 id="campaign-title">Timeless Essentials</h2>

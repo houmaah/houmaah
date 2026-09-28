@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router";
+import { assetPath } from "../assetPath";
 import {
   SHOP_CATEGORIES,
   SORT_OPTIONS,
@@ -608,8 +609,8 @@ export function ProductDetailPage() {
   const detailChips = [product.category, product.label, "COD available"];
   const galleryImages = [
     { src: product.image, alt: product.alt },
-    { src: "/assets/houmaah-hero-banner.png", alt: `${product.name} campaign styling` },
-    { src: "/assets/houmaah-timeless-essentials-banner.png", alt: `${product.name} editorial detail` },
+    { src: assetPath("assets/houmaah-hero-banner.png"), alt: `${product.name} campaign styling` },
+    { src: assetPath("assets/houmaah-timeless-essentials-banner.png"), alt: `${product.name} editorial detail` },
   ];
   const relatedProducts = products.filter((item) => item.id !== product.id && item.category === product.category).slice(0, 4);
   const displayedRelated = relatedProducts.length ? relatedProducts : products.filter((item) => item.id !== product.id).slice(0, 4);
